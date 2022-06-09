@@ -38,3 +38,49 @@ body {
 .titulo span {
     font-size: 2rem;
 }
+
+.contenedor{
+    max-width: 120rem; /*toma 1200px como maximo, si es que esta disponible, sino toma todo el espacio dispoible*/
+    margin: 0 auto;
+}
+
+.nav-bg{
+    background-color: var(--secundario);
+
+}
+
+.navegacion-principal{
+    display: flex;
+    flex-direction: column;
+    /*align-items: center; (Ese es el justify-content de las columnas)*/
+}
+
+@media (min-width: 768px){ /* tablet */
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }  
+}
+
+.navegacion-principal a{
+    display: block;
+    text-align: center;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem; /*el padding sirve para rellenar el espacio, mientras el margin delimita el elemento*/
+
+}
+
+.navegacion-principal a:hover{ /*es el que nos dara el efecto*/
+    background-color: var(--primario);
+    color: var(--negro);
+    font-weight:bold;
+}
+
+.hero{
+    background-image: url(../img/Hollow.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
